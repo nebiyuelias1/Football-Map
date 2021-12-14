@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Football Map</string>
+    <string name="content_description">Map of the world</string>
 </resources>
