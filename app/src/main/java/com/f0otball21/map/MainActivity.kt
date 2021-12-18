@@ -2,7 +2,6 @@ package com.f0otball21.map
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Observer
 import com.hbb20.CountryPickerView
 import com.hbb20.countrypicker.models.CPCountry
 
@@ -30,6 +29,9 @@ class MainActivity : AppCompatActivity() {
 
         countryPicker.cpViewHelper.onCountryChangedListener = { selectedCountry: CPCountry? ->
             if (isCountryDialogOpened) {
+                if (selectedCountry != null) {
+                    CustomDialogFragment(selectedCountry).show(supportFragmentManager, null);
+                }
             }
             isCountryDialogOpened = true;
         }
